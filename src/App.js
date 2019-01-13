@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { AppOptions } from './AppOptions';
 import { Grid, Segment } from 'semantic-ui-react'
-import { AppHeader } from './header';
+import { AppHeader } from './AppHeader';
 import { UserProfileComponent } from './components/UserProfileComponent';
 
 class App extends Component {
