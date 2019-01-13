@@ -1,24 +1,27 @@
 import React from 'react';
-import { Grid, Search, Button, Menu } from 'semantic-ui-react';
+import { Grid, Image, Menu, Input } from 'semantic-ui-react';
 
 export const AppHeader = () => {
     return (
         <div>
-            <Grid columns={2}>
-                <Grid.Column >
-                    <Menu vertical inverted color='blue'>
+            <Grid columns={2} stretched>
+                <Grid.Column width={3}>
+                    <Menu vertical inverted color='grey'>
                         <Menu.Item as='a' >
-                            XYZ Company
+                            XYZ
                         </Menu.Item>
                     </Menu>
-                </Grid.Column>
-                <Grid.Column >
-                    <Grid columns={2}>
-                        <Grid.Column>
-                            <Search ></Search>
+                </Grid.Column >
+                <Grid.Column width={13}>
+                    <Grid columns={2} stretched>
+                        <Grid.Column width={9}>
+                            <Input icon='search' placeholder='search ...' fluid/>  
                         </Grid.Column>
-                        <Grid.Column >
-                            <Button >Logout</Button>
+                        <Grid.Column width={7}>
+                            <div>
+                                <Image src='https://react.semantic-ui.com/images/avatar/large/elliot.jpg' avatar size ='mini' />
+                                <span>Nihal Shetty</span>
+                            </div>
                         </Grid.Column>
                     </Grid>
                 </Grid.Column>

@@ -4,13 +4,13 @@ import { Menu, Icon } from 'semantic-ui-react'
 export class AppOptions extends Component {
 
     state = {
-        activeMenu: ''
+        activeMenu: 'user'
     }
 
     onClickHandler = (name) => this.setState({ activeMenu: name })
 
     render() {
-        return <Menu vertical inverted color='grey'>
+        return <Menu vertical inverted color='blue'>
                 <Menu.Item as='a' active={this.state.activeMenu === 'email'} onClick={ e => this.onClickHandler('email')} >
                     <Icon name='envelope' />
                     Mail Box
