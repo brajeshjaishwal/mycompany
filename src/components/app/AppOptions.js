@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Menu, Icon } from 'semantic-ui-react'
+import {withRouter} from 'react-router-dom'
 
-export class AppOptions extends Component {
+class AppOptions extends Component {
 
     state = {
         activeMenu: 'user'
@@ -9,7 +10,7 @@ export class AppOptions extends Component {
 
     onClickHandler = (name) => {
         this.setState({ activeMenu: name })
-        this.props.history.push(`/{name}`)
+        this.props.history.push(`/` + name)
     }
 
     render() {
@@ -41,3 +42,5 @@ export class AppOptions extends Component {
             </Menu>
         }
     }
+
+    export default withRouter(AppOptions)
