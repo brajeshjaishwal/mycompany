@@ -3,7 +3,7 @@ import './App.css';
 import { AppOptions } from './AppOptions';
 import { Grid, Segment } from 'semantic-ui-react'
 import { AppHeader } from './AppHeader';
-import { UserProfileComponent } from './components/UserProfileComponent';
+import { Dashboard } from './Dashboard';
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
               <AppOptions />
             </Grid.Column>
             <Grid.Column  width={13}>
-              <UserProfileComponent />
+              <Dashboard />
             </Grid.Column>
         </Grid>
       </Segment>

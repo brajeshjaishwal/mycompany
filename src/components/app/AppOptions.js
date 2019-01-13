@@ -7,7 +7,10 @@ export class AppOptions extends Component {
         activeMenu: 'user'
     }
 
-    onClickHandler = (name) => this.setState({ activeMenu: name })
+    onClickHandler = (name) => {
+        this.setState({ activeMenu: name })
+        this.props.history.push(`/{name}`)
+    }
 
     render() {
         return <Menu vertical inverted color='blue'>
