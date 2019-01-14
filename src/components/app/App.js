@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Segment, Grid } from 'semantic-ui-react';
 import AppOptions from './AppOptions';
-import { AppHeader } from './AppHeader';
+import AppHeader from './AppHeader';
 
 import UserProfileComponent from '../users/users'
 import { InvoiceComponent } from '../invoice/InvoiceComponent';

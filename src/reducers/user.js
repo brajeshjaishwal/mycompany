@@ -66,6 +66,13 @@ export const user = (state = initialState, action) => {
         case globals.FETCHUSERS_SUCCEDED:
         case globals.FETCHUSERS_FAILED:
             return { ...state, ...action.payload }
+        case globals.SEARCHUSERS:
+            let srch = action.payload.searchString.toUpperCase()
+            let users = action.payload.searchString && action.payload.searchString !== "" ? 
+                            initialState.users.filter(u => u.name.toUpperCase().includes(srch)) :
+                            initialState.users
+            let userArray = users ? users : []
+            return { ...state, users: userArray}
         default:
             return { ...state}
     }

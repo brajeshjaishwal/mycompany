@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Icon, Menu, Button, Grid, Checkbox, Card, Divider, Segment, Container } from 'semantic-ui-react';
+import { Icon, Menu, Button, Grid, Checkbox, Card } from 'semantic-ui-react';
 import { UserComponent } from './user';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -12,7 +12,7 @@ class UserProfileComponent extends Component {
     render() {
         let users = this.props.users;
         if(!users) 
-            return <div>Loading</div>
+            return <div>Nothing</div>
         else 
             return (<div>
                     <Menu text>
@@ -25,17 +25,19 @@ class UserProfileComponent extends Component {
                     <Grid columns={2}>
                         <Grid.Column width={3}>
                             <Menu vertical>
-                                <Menu.Item><Checkbox label='Team'/></Menu.Item>
+                                <Menu.Item><Checkbox label='Team' checked/></Menu.Item>
                                 <Menu.Item><Checkbox label='Customer'/></Menu.Item>
                                 <Menu.Item><Checkbox label='Vendor'/></Menu.Item>
                             </Menu>
                         </Grid.Column >
                         <Grid.Column width={13}>
-                            <Card.Group >
-                                {
-                                    users.map(u => <UserComponent user = {u} key={u.id} />)
-                                }
-                            </Card.Group>
+                            {users.length > 0 && 
+                                <Card.Group >
+                                    {
+                                        users.map(u => <UserComponent user = {u} key={u.id} />)
+                                    }
+                                </Card.Group>
+                            }
                         </Grid.Column>
                     </Grid>
                 </div>)
