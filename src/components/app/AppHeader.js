@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import { Image, Menu, Input, Icon, Grid, Segment, Button, Label, Header } from 'semantic-ui-react';
+import { Image, Input, Grid, Segment, Button, Header } from 'semantic-ui-react';
 
 export class AppHeader extends Component {
     onLogout = () => {
 
     }
     render() {
-        let user = sessionStorage.getItem('name')
+        //let user = sessionStorage.getItem('name')
         return (
                     <Segment inverted color='blue'>
                         <Grid stretched columns={4}>

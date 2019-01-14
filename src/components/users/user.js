@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Image, Icon, Dropdown, Grid, Divider } from 'semantic-ui-react';
+import { Card, Image, Icon, Dropdown, Grid, Divider, Button } from 'semantic-ui-react';
 
 export const UserComponent = ({user}) => {
     return (
@@ -18,7 +18,7 @@ export const UserComponent = ({user}) => {
                         <Image size='tiny' src = {user.img} circular/>
                     </Grid.Column>
                     <Grid.Column textAlign='right'>
-                        <Icon name='share' />
+                        <Icon name='share' flipped='vertically' size='small' link/>
                     </Grid.Column>
                 </Grid>
                 <Divider hidden></Divider>
@@ -27,12 +27,12 @@ export const UserComponent = ({user}) => {
                 <Card.Description  textAlign='center'>{user.email}</Card.Description>
             </Card.Content>
             <Card.Content extra textAlign='center' >
-                <div >
-                    <Icon name='facebook' />
-                    <Icon name='twitter' />
-                    <Icon name='instagram' />
-                    <Icon name='linkedin' />
-                </div>
+            <div>
+                <Button circular color='facebook' icon='facebook' />
+                <Button circular color='twitter' icon='twitter' />
+                <Button circular color='linkedin' icon='linkedin' />
+                <Button circular color='google plus' icon='google plus' />
+            </div>
             </Card.Content>
             </Card>
     )
