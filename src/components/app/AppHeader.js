@@ -14,10 +14,10 @@ export const AppHeader = () => {
                 </Grid.Column >
                 <Grid.Column width={13}>
                     <Grid columns={2} stretched>
-                        <Grid.Column width={9}>
+                        <Grid.Column width={11}>
                             <Input icon='search' placeholder='search ...' fluid/>  
                         </Grid.Column>
-                        <Grid.Column width={7}>
+                        <Grid.Column width={5}>
                             <div>
                                 <Image src='https://react.semantic-ui.com/images/avatar/large/elliot.jpg' avatar size ='mini' />
                                 <span>Nihal Shetty</span>
