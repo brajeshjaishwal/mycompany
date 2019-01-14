@@ -12,6 +12,7 @@ import { SettingsComponent } from '../settings/Settings';
 import { PurchaseComponent } from '../purchases/Purchase'
 import RegisterComponent from '../users/register';
 import LoginComponent from '../users/login';
+import { addUserComponent } from '../users/addUser';
 
 export const App = () => {
     return <BrowserRouter>
@@ -33,6 +34,7 @@ export const App = () => {
                                     <Route exact path="/documents" component={DocumentsComponent}/>
                                     <Route exact path="/purchase" component={PurchaseComponent}/>
                                     <Route exact path="/settings" component={ SettingsComponent }/>
+                                    <Route exact path="/adduser" componet={ addUserComponent } />
                                 </Switch>
                             </Segment>
                         </Grid.Column>

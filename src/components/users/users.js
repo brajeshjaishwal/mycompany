@@ -9,6 +9,9 @@ class UserProfileComponent extends Component {
     componentDidMount = async () => {
         await this.props.fetchUsers()
     }
+    onAddUser = () => {
+        //this.props.history.push("/adduser")
+    }
     render() {
         let users = this.props.users;
         if(!users) 
@@ -19,7 +22,7 @@ class UserProfileComponent extends Component {
                         <Menu.Item header>Team</Menu.Item>
                         <Menu.Item><Icon name='users' />{users.length} Candidates</Menu.Item>
                         <Menu.Item position='right'>
-                            <Button icon='add user' content='Add Member' size='small' circular primary/>
+                            <Button icon='add user' content='Add Member' size='small' circular primary onClick={this.onAddUser}/>
                         </Menu.Item>
                     </Menu>
                     <Grid columns={2}>
